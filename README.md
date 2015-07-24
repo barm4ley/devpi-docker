@@ -34,4 +34,11 @@ docker run -d --name devpi -p 80:80 devpi
 Installing
 ----------
 
-pip3.4 -vvv --trusted-host <<server_address>> install --index http://<<server_address>>/root/pypi/+simple/ <<package_to_install>>
+```
+#Note: this is boot2docker address
+PIP_SERVER=192.168.59.103
+
+#Replace pkg_to_install with real package name
+pip3.4 -vvv --trusted-host $PIP_SERVER install --index http://$PIP_SERVER/root/pypi/+simple/ pkg_to_install
+```
+

@@ -30,3 +30,8 @@ devpi will be installed behind nginx, so you will need to allow port 80.
 ```
 docker run -d --name devpi -p 80:80 devpi
 ```
+
+Installing
+----------
+
+pip3.4 -vvv --trusted-host <<server_address>> install --index http://<<server_address>>/root/pypi/+simple/ <<package_to_install>>
